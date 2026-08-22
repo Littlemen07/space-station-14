@@ -365,3 +365,18 @@
   - !type:BuyBeforeCondition
     whitelist:
       - SpellbookCryomancer
+
+- type: listing
+  id: SpellbookSoulmancer
+  name: spellbook-soulmancer-name
+  description: spellbook-soulmancer-desc
+  priority: 19
+  productEntity: ClothingOuterSoftsuitWizardDark
+  cost:
+    WizCoin: 11
+  categories:
+  - SpellbookWar
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  disableRefund: true

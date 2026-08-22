@@ -64,3 +64,6 @@ spellbook-icepillars-desc = Summon a row of somewhat sturdy ice pillars in front
 
 spellbook-eruption-name = Eruption
 spellbook-eruption-desc = Summon a rune that after 2 seconds will start sending fiery shrapnels in a wide area.
+
+spellbook-soulmancer-name = The Soulmancer path
+spellbook-soulmancer-desc = A set of armor and spells fit for the most cruel students of the soul. Pain and death are you vows and you will partake in both.
