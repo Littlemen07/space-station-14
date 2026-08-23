@@ -414,3 +414,20 @@
   - !type:BuyBeforeCondition
     whitelist:
       - SpellbookSoulmancer
+
+- type: listing
+  id: ReaperScythe
+  name: spellbook-scythe-name
+  description: spellbook-scythe-desc
+  priority: 22
+  productEntity: ClothingOuterSoftsuitWizardDark
+  cost:
+    WizCoin: 0
+  categories:
+  - SpellbookWar
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyBeforeCondition
+    whitelist:
+      - SpellbookSoulmancer

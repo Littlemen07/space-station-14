@@ -73,3 +73,6 @@ spellbook-summoncursedskull-desc = Summon a cursed skull that will seek out a ne
 
 spellbook-soulknives-name = Rune of cutting
 spellbook-soulknives-desc = Summon several orbs that once charged, become spinning ethereal knives.
+
+spellbook-scythe-name = Reaper's Scythe
+spellbook-scythe-desc = A gigantic scythe, sharpned by the souls of the tormented it only aks to grow sharper still.
