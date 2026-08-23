@@ -293,3 +293,107 @@
     proto: ProjectileSoulKnife
   - type: TimedDespawn
     lifetime: 2.1
+
+- type: entity
+  parent: ActionFreezeRune
+  id: ActionImpale
+  name: Impale
+  description: Summons spears from the ground that will impale anyone that can't move away in time (10 seconds cooldown).
+  components:
+  - type: Action
+    useDelay: 10
+    icon:
+        sprite: _Starlight/Objects/Magic/magicactions.rsi
+        state: spearup # CHANGE THE SPRITE
+  - type: TargetAction
+    range: 10
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: SummoningImpale
+        amount: 1
+  - type: SpeakOnAction
+    sentence: action-speech-spell-impale
+    tts: action-speech-spell-impale-tts
+    modifier: Spell
+  - type: EorgPreventAction
+
+- type: entity
+  id: SummoningImpale
+  name: coiled spears
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: speardown
+  - type: CustomSpawner
+    enabled: true
+    spawnOnInterval: true
+    spawnInterval: 0.1
+    oneShot: true
+    strategy: All
+    spawnData:
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 0, 2
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - -1, 1
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 0, 1
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 1, 1
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - -2, 0
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - -1, 0
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 0, 0
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 1, 0
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 2, 0
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - -1, -1
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 0, -1
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 1, -1
+    - protoId: CoiledSpears
+      spawnOffsets:
+      - 0, -2
+  - type: TimedDespawn
+    lifetime: 0.5
+
+- type: entity
+  parent: BaseRune
+  id: CoiledSpears
+  name: coiled spears
+  descritption: Watch out!!
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: speardown
+  - type: TriggerOnSpawn
+  - type: TimerTrigger
+    examinable: false
+    popup: null
+    delay: 1.5
+  - type: SpawnOnTrigger
+    keysIn:
+    - timer
+    proto: ImpaleSpear
+  - type: TimedDespawn
+    lifetime: 1.55

@@ -43,3 +43,5 @@ action-speech-spell-summoncursedskull = EVOCO DOLOR !!
 action-speech-spell-summoncursedskull-tts = EBOCO DOLOR!
 action-speech-spell-soulknives = CAEDEMINI !!
 action-speech-spell-soulknives-tts = KAEDE MINI!
+action-speech-spell-impale = TRANSFIGO TE !!
+action-speech-spell-impale-tts = TRANSFIGO TE!

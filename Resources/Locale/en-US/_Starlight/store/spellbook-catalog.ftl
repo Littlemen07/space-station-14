@@ -76,3 +76,6 @@ spellbook-soulknives-desc = Summon several orbs that once charged, become spinni
 
 spellbook-scythe-name = Reaper's Scythe
 spellbook-scythe-desc = A gigantic scythe, sharpned by the souls of the tormented it only aks to grow sharper still.
+
+spellbook-impale-name = Impale
+spellbook-impale-desc = Summon several spear in a cross shape area that will impale anyone standing there.
