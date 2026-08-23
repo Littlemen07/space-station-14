@@ -380,3 +380,20 @@
   - !type:ListingLimitedStockCondition
     stock: 1
   disableRefund: true
+
+- type: listing
+  id: ActionSummonCursedSkull
+  name: spellbook-summoncursedskull-name
+  description: spellbook-summoncursedskull-desc
+  priority: 20
+  productAction: ActionSummonCursedSkull
+  cost:
+    WizCoin: 0
+  categories:
+  - SpellbookWar
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyBeforeCondition
+    whitelist:
+      - SpellbookSoulmancer

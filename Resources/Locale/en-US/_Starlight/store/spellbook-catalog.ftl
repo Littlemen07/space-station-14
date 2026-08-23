@@ -67,3 +67,6 @@ spellbook-eruption-desc = Summon a rune that after 2 seconds will start sending 
 
 spellbook-soulmancer-name = The Soulmancer path
 spellbook-soulmancer-desc = A set of armor and spells fit for the most cruel students of the soul. Pain and death are you vows and you will partake in both.
+
+spellbook-summoncursedskull-name = Summon cursed skull
+spellbook-summoncursedskull-desc = Summon a cursed skull that will seek out a nearby target and explode on them, stunning them.

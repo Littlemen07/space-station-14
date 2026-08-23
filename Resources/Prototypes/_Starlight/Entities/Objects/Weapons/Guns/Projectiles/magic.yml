@@ -298,3 +298,24 @@
     count: 5
   - type: TimedDespawn
     lifetime: 0.25
+
+- type: entity
+  id: PelletClusterSoul3
+  name: soul fragment
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+      - state: soulfrag
+  - type: Projectile
+    damage:
+      types:
+        Poison: 3
+    soundHit:
+      path: /Audio/Effects/gen_hit.ogg
+  - type: StaminaDamageOnCollide
+    damage: 50
+  - type: TimedDespawn
+    lifetime: 0.1

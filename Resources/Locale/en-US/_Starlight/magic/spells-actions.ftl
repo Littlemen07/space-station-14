@@ -39,3 +39,5 @@ action-speech-spell-icepillars = TE EVOCO, GLACIES !
 action-speech-spell-icepillars-tts = TE EBOCO, GLAKIES!!
 action-speech-spell-eruption = CONCREMARE !
 action-speech-spell-eruption-tts = CONCREMARE!!
+action-speech-spell-summoncursedskull = EVOCO DOLOR !!
+action-speech-spell-summoncursedskull-tts = EBOCO DOLOR!

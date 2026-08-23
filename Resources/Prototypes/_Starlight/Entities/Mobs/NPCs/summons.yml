@@ -83,3 +83,90 @@
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
+
+
+- type: entity
+  name: ice sculpture
+  id: SummonCursedSkull
+  parent: MobElementalBase
+  description: A flying skull, animated by magic and driven by pain.
+  components:
+    - type: LanguageKnowledge
+      speaks:
+      - Darktongue
+      understands:
+      - GalacticCommon
+      - Darktongue
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+      blackboard:
+        NavSmash: !type:Bool
+          true
+    - type: NpcFactionMember
+      factions:
+      - Wizard #find a way to make the npc attack other wizs, half solved by ghostrole
+    - type: Sprite
+      sprite: _Starlight/Mobs/Demons/cursedskull.rsi
+      state: cursedskull
+    - type: CombatMode
+    - type: Physics
+      bodyStatus: InAir
+    - type: MovementAlwaysTouching
+    - type: CanMoveInAir
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 185
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+    - type: NoSlip
+    - type: MeleeWeapon
+      hidden: true
+      soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      damage:
+        types:
+          Poison: 10
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+        - CannotSuicide
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        30: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 30
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: TriggerOnMeleeHit
+      triggerEveryHit: false
+      targetIsUser: false
+    - type: ProjectileGrenade
+      triggerKey: trigger
+      fillPrototype: PelletClusterSoul3
+      capacity: 30
+    - type: PointLight
+      radius: 1.5
+      energy: 2
+      color: "#31F5C0"
+    - type: MovementSpeedModifier
+      walkSpeedModifier : 1.3
+      sprintSpeedModifier : 1.3
+    - type: DeleteOnTrigger
+      keysIn:
+      - trigger
