@@ -64,6 +64,24 @@
     },
     {
       "name": "cursedskullicon"
-    }
+    },
+    {
+      "name": "kniverune"
+    },
+    {
+      "name": "kniveruneanim",
+      "delays": [
+       [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.4]
+            ]
+     }
   ]
 }

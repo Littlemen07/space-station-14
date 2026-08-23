@@ -41,3 +41,5 @@ action-speech-spell-eruption = CONCREMARE !
 action-speech-spell-eruption-tts = CONCREMARE!!
 action-speech-spell-summoncursedskull = EVOCO DOLOR !!
 action-speech-spell-summoncursedskull-tts = EBOCO DOLOR!
+action-speech-spell-soulknives = CAEDEMINI !!
+action-speech-spell-soulknives-tts = KAEDE MINI!

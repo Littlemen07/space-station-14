@@ -187,3 +187,109 @@
     delay: 1.5
   - type: SpawnOnTrigger
     proto: EruptionBomb
+
+- type: entity
+  parent: ActionFreezeRune
+  id: ActionSoulKnives
+  name: Rune of soul cutting
+  description: Summons a magical rune that will place several immobile soul knives, hurting anyone who comes in contact with them.
+  components:
+  - type: Action
+    useDelay: 30
+    icon:
+        sprite: _Starlight/Objects/Magic/magicactions.rsi
+        state: kniverune
+  - type: TargetAction
+    range: 16
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: KnivesRune
+        amount: 1
+  - type: SpeakOnAction
+    sentence: action-speech-spell-soulknives
+    tts: action-speech-spell-soulknives-tts
+    modifier: Spell
+  - type: EorgPreventAction
+
+- type: entity
+  id: KnivesRune
+  name: rune of soul cutting
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Magic/magicactions.rsi
+    layers:
+    - state: kniveruneanim
+  - type: CustomSpawner
+    enabled: true
+    spawnOnInterval: true
+    spawnInterval: 0.1
+    oneShot: true
+    strategy: All
+    spawnData:
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - -2, 2
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 0, 2
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 2, 2
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - -1, 1
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 1, 1
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 0, 1
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - -2, 0
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 2, 0
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 0, -1
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - -1, -1
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 1, -1
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - -2, -2
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 0, -2
+    - protoId: Runeknifespawn
+      spawnOffsets:
+      - 2, -2
+  - type: TimedDespawn
+    lifetime: 2
+
+- type: entity
+  parent: BaseRune
+  id: Runeknifespawn
+  name: orb
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: orbknives
+  - type: TriggerOnSpawn
+  - type: TimerTrigger
+    examinable: false
+    popup: null
+    delay: 2
+  - type: SpawnOnTrigger
+    keysIn:
+    - timer
+    proto: ProjectileSoulKnife
+  - type: TimedDespawn
+    lifetime: 2.1

@@ -70,3 +70,6 @@ spellbook-soulmancer-desc = A set of armor and spells fit for the most cruel stu
 
 spellbook-summoncursedskull-name = Summon cursed skull
 spellbook-summoncursedskull-desc = Summon a cursed skull that will seek out a nearby target and explode on them, stunning them.
+
+spellbook-soulknives-name = Rune of cutting
+spellbook-soulknives-desc = Summon several orbs that once charged, become spinning ethereal knives.
