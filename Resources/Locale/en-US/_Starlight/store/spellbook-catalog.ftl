@@ -79,3 +79,6 @@ spellbook-scythe-desc = A gigantic scythe, sharpned by the souls of the tormente
 
 spellbook-impale-name = Impale
 spellbook-impale-desc = Summon several spear in a cross shape area that will impale anyone standing there.
+
+spellbook-shadowpassage-name = Shadow passage
+spellbook-shadowpassage-desc = Glare at the walls in front of you, collapsing them to nothingness.

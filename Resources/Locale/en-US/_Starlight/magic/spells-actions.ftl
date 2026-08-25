@@ -45,3 +45,5 @@ action-speech-spell-soulknives = CAEDEMINI !!
 action-speech-spell-soulknives-tts = KAEDE MINI!
 action-speech-spell-impale = TRANSFIGO TE !!
 action-speech-spell-impale-tts = TRANSFIGO TE!
+action-speech-spell-darkpassage = NIHIL !
+action-speech-spell-darkpassage-tts = NIHIL!

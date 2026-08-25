@@ -105,3 +105,18 @@
     entity: MobBat
     revertOnDeath: true
     revertOnCrit: true
+
+- type: polymorph
+  id: Shadow
+  configuration:
+    entity: ShadowKudzuWeak
+    forced: true
+    inventory: None
+    transferName: false
+    transferDamage: false
+    revertOnCrit: false
+    revertOnDeath: false
+    polymorphSound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg
+    exitPolymorphSound: !type:SoundPathSpecifier
+      path: /Audio/Magic/forcewall.ogg

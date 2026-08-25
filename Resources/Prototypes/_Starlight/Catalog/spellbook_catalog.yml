@@ -448,3 +448,20 @@
   - !type:BuyBeforeCondition
     whitelist:
       - SpellbookSoulmancer
+
+- type: listing
+  id: SpellbookShadowPassage
+  name: spellbook-shadowpassage-name
+  description: spellbook-shadowpassage-desc
+  priority: 24
+  productAction: ActionDarkPassage
+  cost:
+    WizCoin: 0
+  categories:
+  - SpellbookWar
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyBeforeCondition
+    whitelist:
+      - SpellbookSoulmancer

@@ -385,3 +385,24 @@
   - type: EmitSoundOnSpawn
     sound:
       path: /Audio/Weapons/slash.ogg
+
+- type: entity
+  id: ProjectilePolyShadow
+  parent: ProjectilePolyboltDoor
+  name: shadow bolt
+  description: Nihil !
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+  - type: PolymorphOnTrigger
+    polymorph: Shadow
+  - type: WhitelistTriggerCondition
+    userWhitelist:
+      components:
+      - Airlock
+      - Firelock
+      tags:
+      - Wall
