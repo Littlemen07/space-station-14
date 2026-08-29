@@ -465,3 +465,20 @@
   - !type:BuyBeforeCondition
     whitelist:
       - SpellbookSoulmancer
+
+- type: listing
+  id: SpellbookAnnihilation
+  name: spellbook-annihilation-name
+  description: spellbook-annihilation-desc
+  priority: 25
+  productAction: ActionAnnihilationRune
+  cost:
+    WizCoin: 0
+  categories:
+  - SpellbookWar
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyBeforeCondition
+    whitelist:
+      - SpellbookSoulmancer

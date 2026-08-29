@@ -82,3 +82,6 @@ spellbook-impale-desc = Summon several spear in a cross shape area that will imp
 
 spellbook-shadowpassage-name = Shadow passage
 spellbook-shadowpassage-desc = Glare at the walls in front of you, collapsing them to nothingness.
+
+spellbook-annihilation-name = Great rune of annihilation
+spellbook-annihilation-desc = Materialise your bottomless malice in a rune that will annihilate anything within it, you are not immune to it.

@@ -397,3 +397,79 @@
     proto: ImpaleSpear
   - type: TimedDespawn
     lifetime: 1.55
+
+- type: entity
+  parent: ActionFreezeRune
+  id: ActionAnnihilationRune
+  name: Great rune of annihilation
+  description: Materialise your bottomless malice in a rune that will annihilate anything in its radius after 4 seconds (3 minutes cooldown).
+  components:
+  - type: Action
+    useDelay: 10
+    icon:
+        sprite: _Starlight/Objects/Magic/magicactions.rsi
+        state: annihilation
+  - type: TargetAction
+    range: 16
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:WorldSpawnSpellEvent
+      prototypes:
+      - id: RuneAnnihilation
+        amount: 1
+  - type: SpeakOnAction
+    sentence: action-speech-spell-annihilationrune
+    tts: action-speech-spell-annihilationrune-tts
+    modifier: Spell
+  - type: EorgPreventAction
+
+- type: entity
+  id: RuneAnnihilation
+  parent: BaseRune
+  name: great rune of annihilation
+  components:
+    - type: Sprite
+      sprite: _Starlight/Objects/Magic/annihilation.rsi
+      layers:
+        - state: annihilation
+    - type: TriggerOnSpawn
+    - type: TimerTrigger
+      delay: 4
+    - type: TimedDespawn
+      lifetime: 14
+    - type: SpawnOnTrigger
+      keysIn:
+      - timer
+      proto: annihilationsmite
+
+- type: entity
+  id: annihilationsmite
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Magic/annihilation.rsi
+    layers:
+      - state: annihilationsmite
+  - type: Clickable
+  - type: Fixtures
+    fixtures:
+       rune:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-2,-2,2,2"
+        hard: false
+        mask:
+          - ItemMask
+        layer:
+          - SlipLayer
+  - type: Physics
+  - type: DamageContacts
+    damageDead: false
+    damage:
+      types:
+        Slash: 50
+        Asphyxiation: 200
+        Structural: 50
+  - type: TimedDespawn
+    lifetime: 10
