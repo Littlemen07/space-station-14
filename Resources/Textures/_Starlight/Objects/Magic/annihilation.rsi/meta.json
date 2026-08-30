@@ -8,10 +8,27 @@
   },
   "states": [
     {
-      "name": "annihilation"
+      "name": "annihilationsmite"
     },
     {
-      "name": "annihilationsmite"
+      "name": "annihilation",
+      "delays": [
+       [
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.3,
+        0.4,
+        0.4,
+        0.4,
+        11
+       ]
+            ]
+
     }
   ]
 }

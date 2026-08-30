@@ -84,10 +84,13 @@
             ]
      },
     {
-      "name": "spearup"
+      "name": "impale"
     },
     {
       "name": "annihilation"
+    },
+    {
+      "name": "darkpassage"
     }
   ]
 }

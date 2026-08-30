@@ -304,7 +304,7 @@
     useDelay: 10
     icon:
         sprite: _Starlight/Objects/Magic/magicactions.rsi
-        state: spearup # CHANGE THE SPRITE
+        state: impale
   - type: TargetAction
     range: 10
     checkCanAccess: false
@@ -441,6 +441,10 @@
       keysIn:
       - timer
       proto: annihilationsmite
+    - type: EmitSoundOnSpawn
+      sound:
+        path: /Audio/_Starlight/Magic/annihilationrune.ogg
+
 
 - type: entity
   id: annihilationsmite

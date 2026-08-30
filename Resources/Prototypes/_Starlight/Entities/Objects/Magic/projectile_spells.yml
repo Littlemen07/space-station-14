@@ -232,7 +232,7 @@
     raiseOnUser: true
     icon:
       sprite: _Starlight/Objects/Magic/magicactions.rsi
-      state: firearrows
+      state: darkpassage
   - type: TargetAction
     range: 60
     checkCanAccess: false
